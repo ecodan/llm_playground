@@ -9,10 +9,18 @@
     <p>Prompt: <input type = "text" name = "prompt" /></p>
 </form>
 
-{% for key,value in pictures.items() %}
-<h2> {{key}}</h2>
-<p> <img src="{{value}}"/></p>
+<h2>Pictures</h2>
+<h3>{{prompt}}</h3>
+<table>
+    <tr><th>Image</th><th>Best pairing</th><th>2nd best pairing</th></tr>
+{% for node in pictures %}
+    <tr>
+        <td><img src="/img/{{node.img}}" width="300px"/><span>{{node.similarity}}</span></td>
+        {% for pairs in node.pairings %}
+        <td><img src="/img/{{pairs.img}}" width="300px"/><span>{{pairs.similarity}}</span></td>
+        {% endfor %}
+    </tr>
 {% endfor %}
-
+</table>
 </body>
 </html>

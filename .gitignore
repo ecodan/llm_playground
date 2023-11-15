@@ -1,1 +1,13 @@
 /.idea/
+/gpt_search.iml
+/openaiapikey.txt
+/embedding_idx.txt
+/data/
+/out/
+/search_explore/test_vision_api.py
+/search_explore/test_CLIP.py
+/tmp/
+/llm_playground.iml
+/.env
+/.idea/
+/.ipynb_checkpoints/
